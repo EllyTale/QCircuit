@@ -663,6 +663,7 @@ class QCircuit:
                                                           norm='ortho', axes=axes)
                                                , axes=axes)
         charge_variable = variable.get_charge_grid()
+        charge_variable = np.ones(len(charge_variable), dtype=complex) * charge_variable
 
         wavefunctions_charge = wavefunctions_charge.reshape((-1, wavefunctions_charge.shape[-1]))
         charge_variable = charge_variable.reshape((-1, charge_variable.shape[-1]))
